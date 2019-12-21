@@ -8,6 +8,8 @@ RUN apt-get update
 RUN apt-get install -y ssh 
 RUN apt-get install -y openssh-server
 
+RUN mkdir -p /var/run/sshd
+
 ADD run.sh /tmp/run.sh
 RUN chmod u+x /tmp/run.sh
 
