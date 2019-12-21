@@ -7,6 +7,7 @@ RUN apt-get update
 
 RUN apt-get install -y ssh 
 RUN apt-get install -y openssh-server
+RUN apt-get install -y curl
 
 RUN mkdir -p /var/run/sshd
 
