@@ -1,5 +1,4 @@
 # Container for project 265 
-
 FROM holbertonschool/265-0
 MAINTAINER Guillaume Salva <guillaume@holbertonschool.com>
 
@@ -11,8 +10,8 @@ RUN apt-get install -y curl
 
 RUN mkdir -p /var/run/sshd
 
-ADD run.sh /tmp/run.sh
-RUN chmod u+x /tmp/run.sh
+ADD run.sh /etc/sandbox_run.sh
+RUN chmod u+x /etc/sandbox_run.sh
 
 # start run!
-CMD ["./tmp/run.sh"]
+CMD ["./etc/sandbox_run.sh"]
